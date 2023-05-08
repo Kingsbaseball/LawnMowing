@@ -94,6 +94,7 @@ header {
   border-radius: 10px;
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 100;
 }
 
 .dropdown-menu.open{
@@ -137,53 +138,6 @@ header {
   }
 }
 
-.form-container {
-  width: 100%;
-  max-width: 650px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 10px;
-  color:#fff;
-  background: #279010;
-}
-.input-row {
-  margin-bottom: 10px;
-}
-.input-row label{
-  display: block;
-  margin-bottom: 3px;
-}
-.input-row input,
-.input-row textarea{
-  width: 100%;
-  padding: 10px;
-  border: 0;
-  border-radius: 3px;
-  outline: 0;
-  margin-bottom: 3px;
-  font-size: 18px;
-}
-.input-row textarea{
-  height: 100px;
-}
-.input-row input[type="submit"]{
-  width: 100px;
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  color: #fff;
-  cursor: pointer;
-  background: orange;
-}
-.success{
-  background: #9fd2a1;
-  padding: 5px 10px;
-  text-align: center;
-  color: black;
-  border-radius: 3px;
-  font-synthesis: 14px;
-  margin-top: 10px;
-}
 
 .back{ 
   text-align: center;
@@ -201,4 +155,59 @@ header {
 .back h1 a:hover{
   color: orange;
   cursor: pointer;
+}
+
+.welcome-to-our-website {
+  text-align: center;
+  justify-content: center;
+  height: 300px;
+  color: #fff;
+}
+
+.welcome-to-our-website h1{
+  padding-top: 90px;
+  font-size: 50px;
+}
+
+.welcome-to-our-website p{
+  padding: 23px;
+  font-size: 25px;
+}
+
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
