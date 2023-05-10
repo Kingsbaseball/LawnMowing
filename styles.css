@@ -8,23 +8,28 @@
 body{
   height: 100vh;
   background-color: #000;
-  background-image: url('https://lawnsmith.imgix.net/articles/96/mowing-for-a-dense-lawn.jpg?auto=format');
+  background: url('https://lawnsmith.imgix.net/articles/96/mowing-for-a-dense-lawn.jpg?auto=format') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-position: center;
 }
 
 li{
   list-style: none;
 }
 
+
 a {
   text-decoration: none;
-  color: #fff;
+  color: orange;
   font-size: 1rem;
 }
 
+
 a:hover {
   color: orange;
+  scale: 1.10;
 }
 /* Header */
 header {
@@ -53,7 +58,7 @@ header {
 }
 
 .navbar .toggle_btn{
-  color: #fff;
+  color: #000;
   font-size: 1.5rem;
   cursor: pointer;
   display: none;
@@ -210,4 +215,118 @@ header {
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+}
+
+.about {
+  width: 100%;
+  padding: 78px 0px;
+}
+
+.about img{
+  height: auto;
+  width: 420px;
+}
+
+.about-text{
+  width: 550px;
+}
+
+.main  {
+  width: 1130px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  backdrop-filter: blur(15px);
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.main img{
+  border-radius: 5px;
+}
+
+.about-text h1 {
+  font-size: 60px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.about-text h5 {
+  font-size: 25px;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  margin-bottom: 45px;
+}
+
+.contact-btn {
+  background-color: orange;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 13px 30px;
+  border-radius: 30px;
+  transition: .4s;
+}
+
+.contact-btn:hover {
+  background: transparent;
+  border: 2px solid orange;
+  cursor: pointer;
+  scale: 1.10;
+}
+
+
+
+@media(max-width: 1100px){
+  .about-text{
+    padding-left: 8px;
+  }
+
+  .about-text h1{
+    font-size: 40px;
+  }
+
+  .about-text h5 {
+    font-size: 23px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+  }
+}
+
+@media(max-width: 970px){
+  .main {
+    display: block;
+    width: 450px;
+  }
+
+  .about-text h1{
+    font-size: 40px;
+  }
+
+  .about-text h5 {
+    font-size: 23px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+    max-width: 420px;
+  }
+}
+
+.success {
+  text-align: center; 
+  padding-left: 5px;
+  padding-right: 5px;
 }
